@@ -1,0 +1,20 @@
+Package: siGSEA
+Type: Package
+Title: A simple GSEA tool for expression data
+Version: 0.1.0
+Author: Kai Gu
+Maintainer: The package maintainer <https://github.com/kaigu1990>
+Depends: 
+    R (>= 3.4.3)
+Suggests:
+    dplyr
+Imports:
+    Matrix
+Description: 
+    This R package is familar with the source code(R) of GSEA. I rebuild a simple GSEA with using little code.
+    It can analyze expression data with most GSEA default parameters, show GSEA report and plots. 
+    Maybe it looks like useless, but is my first try of simple R package.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
