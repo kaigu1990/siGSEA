@@ -1,5 +1,5 @@
 get_sd <- function(x){
-  sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
+  sqrt(rowSums((x - Matrix::rowMeans(x))^2)/(dim(x)[2] - 1))
 }
 
 get_s2n_ranking <- function(x, data, index, phen, permute = 0){
@@ -14,14 +14,18 @@ get_s2n_ranking <- function(x, data, index, phen, permute = 0){
 
   if (permute == 0){
     label1 <- phen
+    print(phen)
   }else{
     label1 <- sample(index, size = length(phen))
   }
 
+  print(class(data[,label1]))
+  print(dim(data[,label1]))
+
   label2 <- index[!index %in% label1]
 
-  mean1 <- rowMeans(data[,label1])
-  mean2 <- rowMeans(data[,label2])
+  mean1 <- Matrix::rowMeans(data[,label1])
+  mean2 <- Matrix::rowMeans(data[,label2])
 
   sd1 <- get_sd(data[,label1])
   sd2 <- get_sd(data[,label2])
