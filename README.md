@@ -33,11 +33,11 @@ Plot GSEA graph
 
 1. Show a certain gene set
 
-		gseaplot <- function(expr = data, list = res, gset = "chr10q11")
+		gseaplot(expr = data, list = res, gset = "chr10q11")
 
 2. Output all gene set, such as nompval < 0.05 & FDR < 0.25
 	
-		gseaplot <- function(expr = data, list = res, gset = NULL, nompval = 0.05, fdr = 0.25)
+		gseaplot(expr = data, list = res, gset = NULL, nompval = 0.05, fdr = 0.25)
 
 ![gsea_plot](https://raw.githubusercontent.com/kaigu1990/siGSEA/master/chrYq11_203.png)
 	
