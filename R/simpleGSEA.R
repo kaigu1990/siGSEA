@@ -66,9 +66,8 @@ simple_gsea <- function(dataexpr, group, geneset, gsminsize=15, gsmaxsize=500, n
   phen2 <- colnames(design)[2]
 
   # Filter gene sets
-  gsminsize = 15
-  gsmaxsize = 500
-
+  # gsminsize = 15
+  # gsmaxsize = 500
   set_list <- list()
   set_name <- c()
   for(line in geneset){
@@ -106,7 +105,7 @@ simple_gsea <- function(dataexpr, group, geneset, gsminsize=15, gsmaxsize=500, n
 
   data <- Matrix(as.matrix(dataexpr))
 
-  obs.s2n <- as.numeric(get_s2n_ranking(x = 0, data = data, index = 1:sample_number, phen = obs.phen1_index, permute = FALSE))
+  obs.s2n <- as.numeric(get_s2n_ranking(x = 0, data = data, index = 1:sample_number, phen = obs.phen1_index, permute = 0))
   obs.s2n_index <- order(obs.s2n, decreasing = T)
   obs.s2n <- obs.s2n[obs.s2n_index]
 
