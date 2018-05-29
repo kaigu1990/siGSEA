@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Kai Gu
 Maintainer: The package maintainer <https://github.com/kaigu1990>
 Depends: 
-    R (>= 3.4.3)
+    R (>= 3.3.1)
 Suggests:
     dplyr
 Imports:
