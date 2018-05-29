@@ -22,7 +22,7 @@ Loading expression file and gene set file (expr data and gene set files are modi
 
 Running siGSEA
 
-	res <- simple_gsea(dataexpr = data_set, 
+	res <- simple_gsea(dataexpr = data, 
                    	   group = class, 
                        geneset = gene_set, 
                        gsminsize = 15, 
@@ -39,5 +39,5 @@ Plot GSEA graph
 	
 		gseaplot <- function(expr = data, list = res, gset = NULL, nompval = 0.05, fdr = 0.25)
 
-
+![gsea_plot](https://raw.githubusercontent.com/kaigu1990/siGSEA/master/chrYq11_203.png)
 	
