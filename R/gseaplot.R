@@ -36,7 +36,8 @@ plot_func <- function(gset, RES, ES, s2n, pick, ind, gset_size, N, group){
   }
   lines(1:N, obs.correl.vector.norm, type = "l", lwd = 1, cex = 1, col = 1)
   lines(c(1, N), c(zero.corr.line, zero.corr.line), lwd = 1, lty = 1, cex = 1, col = 1) # zero correlation horizontal line
-  arg.correl <- which(abs(s2n) == min(abs(s2n)))
+  # arg.correl <- which(abs(s2n) == min(abs(s2n)))
+  arg.correl <- order(abs(s2n), decreasing = T)[N]
   lines(c(arg.correl, arg.correl), c(min.plot, max.plot), lwd = 1, lty = 3, cex = 1, col = 3) # zero crossing correlation vertical line
 
   leg.txt <- paste0("  ", phen1, "  ")
